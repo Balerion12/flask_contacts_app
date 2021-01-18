@@ -18,6 +18,7 @@
         <td>Nombre</td>
         <td>Telefono</td>
         <td>Email</td>
+        <td>Opciones</td>
     </thead>
     <tbody>
         {% for contacto in contactos %}
@@ -25,6 +26,10 @@
                 <td>{{ contacto.1 }}</td>
                 <td>{{ contacto.2 }}</td>
                 <td>{{ contacto.3 }}</td>
+                <td>
+                    <a href="/edit/{{ contacto.0 }}">Editar</a>
+                    <a href="/delete/{{ contacto.0 }}">Eliminar</a>
+                </td>
             </tr>
         {% endfor %}
     </tbody>
